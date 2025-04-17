@@ -1,28 +1,25 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/y7gywb5-)
-# GEOG_6592_Lab 4
-## Objectives of this lab
----
-Convert your lab-1 model into a spatially explicit model.
+# Building a Spatially Explicit Deep Neural Network Model for Housing Price Prediction with Location Encoders
 
-Explore/install/use the following python packages:
+This project develops a **spatially explicit deep neural network (DNN)** model to predict housing prices across various locations in **California**. The model integrates traditional property-specific features with spatial and contextual information, leveraging location encoders to capture geographic variation.
 
-- [```geopandas```](https://geopandas.org/)  - to read shapefile data
+## 🏠 Objective
 
-- [```pytorch```](https://pytorch.org/) - to build deep learning models
+To accurately predict housing prices by combining:
+- **Property-specific features**: number of bedrooms, total rooms, house age, etc.
+- **Contextual features**: geographic, socioeconomic, demographic, and environmental factors.
 
-- [```matplotlib```](https://matplotlib.org/) - for visualization
+## 🧠 Method Overview
 
+- A location encoder is used to embed spatial characteristics.
+- Deep Neural Networks (DNNs) are applied to combine all input features.
+- **Optuna** is used for hyperparameter tuning to optimize model performance.
 
-## Instructions
----
-- Clone this repository using [```git bash```](https://git-scm.com/downloads) or [```GitHub Desktop```](https://desktop.github.com/)
-    - You might need to setup an access token to clone this repo to your local machine. Please see me if you face any difficulties in this step.
-- Refer to the [instructions file](https://github.com/UGA-Geography-Gengchen-Mai/Lab4/blob/main/Lab4.pdf) and create a new jupyter notebook that will contain your solution to this lab. Please name it as 'Lastname_Lab4.ipynb'.
-- Commit your changes locally using the ```git commit``` command and push your changes to the remote using the ```git push``` command.
-- Once you have pushed your submission, I will be able to see it and will grade it on my end.
-- This lab is due on: **April 23, 2024**
+## 📁 Project Setup
 
-## Note
----
-- You can use your already existing submission from Lab-1 and modify that.
-- You can reach me anytime by email if you have any questions: ao49206@uga.edu.
+### 1. Clone the base repository
+
+This project builds upon the [space2vec_demo](https://github.com/gengchenmai/space2vec_demo) repo:
+
+```bash
+git clone https://github.com/gengchenmai/space2vec_demo
+cd space2vec_demo
